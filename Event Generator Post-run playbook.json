@@ -1,0 +1,1676 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "clean": true,
+            "code_block": "",
+            "description": "",
+            "hash": "d2866307dcddb5cc6ecbc28dcaef93ea54c7c5bf",
+            "joint": {
+                "cells": [
+                    {
+                        "0": "S",
+                        "1": "T",
+                        "2": "A",
+                        "3": "R",
+                        "4": "T",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "ref-x": 33,
+                                "ref-y": 8,
+                                "text": "START"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "ref-x": 13,
+                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'geolocate_ip_1' block\n    geolocate_ip_1(container=container)\n\n    # call 'add_file_1' block\n    add_file_1(container=container)\n\n    # call 'send_email_1' block\n    send_email_1(container=container)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "8c10b465-f32c-447e-98bf-b9389f8e853a",
+                        "inPorts": [],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 21,
+                        "line_start": 7,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 1,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 320,
+                            "y": 160
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "state": "start",
+                        "status": "",
+                        "title": "START",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 1
+                    },
+                    {
+                        "0": "E",
+                        "1": "N",
+                        "2": "D",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".title": {
+                                "text": "END"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_end.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_finish(container, summary):\n    phantom.debug('on_finish() called')\n    # This function is called after all actions are completed.\n    # summary of all the action and/or all details of actions\n    # can be collected here.\n\n    # summary_json = phantom.get_summary()\n    # if 'result' in summary_json:\n        # for action_result in summary_json['result']:\n            # if 'action_run_id' in action_result:\n                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)\n                # phantom.debug(action_results)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "send email, add file, geolocate ip",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "8a22524f-809d-4f0f-8315-c2386920cbe8",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 107,
+                        "line_start": 94,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 5,
+                        "outPorts": [],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1020,
+                            "y": 160
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "state": "end",
+                        "status": "",
+                        "title": "END",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 2
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "7a546f7c-a07f-4311-aabb-de0bc8a25f2d",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8c10b465-f32c-447e-98bf-b9389f8e853a",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "32032bd8-bd26-4381-bd04-6d19f3b806ec",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 3
+                    },
+                    {
+                        "action": "geolocate ip",
+                        "action_type": "investigate",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "ip": "artifact:*.cef.sourceAddress"
+                        },
+                        "angle": 0,
+                        "app": "MaxMind",
+                        "appid": "c566e153-3118-4033-abda-14dd9748c91a",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "geolocate ip",
+                                "actions": [
+                                    "geolocate ip"
+                                ],
+                                "active": true,
+                                "app_name": "MaxMind",
+                                "app_version": "2.0.3",
+                                "appid": "c566e153-3118-4033-abda-14dd9748c91a",
+                                "asset_name": "maxmind",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "ip": "artifact:*.cef.sourceAddress"
+                                },
+                                "has_app": true,
+                                "id": 2,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "maxmind",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.continent_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Asia"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.country_iso_code",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "IN"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.country_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "India"
+                                        ],
+                                        "map_info": "Country"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.latitude",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            23.0333
+                                        ],
+                                        "map_info": "latitude"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.longitude",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            72.6167
+                                        ],
+                                        "map_info": "longitude"
+                                    },
+                                    {
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.parameter.ip",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "203.88.139.34"
+                                        ],
+                                        "map_info": "IP Address"
+                                    },
+                                    {
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.parameter.ip",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "203.88.139.34"
+                                        ],
+                                        "map_info": "name"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.city_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Ahmedabad"
+                                        ],
+                                        "map_info": "City"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.postal_code",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            380007
+                                        ],
+                                        "map_info": "Postal Code"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.as_org",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            ""
+                                        ],
+                                        "map_info": "Organization"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.state_iso_code",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "GJ"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.state_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Gujarat"
+                                        ],
+                                        "map_info": "State/Province"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.time_zone",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Asia/Kolkata"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.city",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Ahmedabad"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.state",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "GJ"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.country",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "India"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "City: Ahmedabad, State: GJ, Country: India"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "ip": {
+                                        "allow_list": true,
+                                        "contains": [
+                                            "ip"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "IP to geolocate",
+                                        "key": "ip",
+                                        "primary": true,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "GeoIP2",
+                                "product_vendor": "MaxMind",
+                                "targets": "2",
+                                "type": "information"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "geolocate ip"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Investigate"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def geolocate_ip_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('geolocate_ip_1() called')\n\n    # collect data for 'geolocate_ip_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.sourceAddress', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'geolocate_ip_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'ip': container_item[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(action=\"geolocate ip\", parameters=parameters, assets=['maxmind'], name=\"geolocate_ip_1\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "32032bd8-bd26-4381-bd04-6d19f3b806ec",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 42,
+                        "line_start": 21,
+                        "message": "Configuring now",
+                        "name": "geolocate ip",
+                        "notes": "",
+                        "number": 1,
+                        "order": 2,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 600,
+                            "y": 100
+                        },
+                        "previous_function": "",
+                        "previous_name": "geolocate_ip_1",
+                        "required_params": {
+                            "ip": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Investigate",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 5
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "425a2ec2-ab4a-4efc-aa36-e2e9c95d96ce",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8c10b465-f32c-447e-98bf-b9389f8e853a",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "9c88c408-b65b-4f2f-beb6-81e9bf54e85c",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 6
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "262caa78-8d76-4161-a7c2-0356290e1870",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8c10b465-f32c-447e-98bf-b9389f8e853a",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "24af7fa8-c2ce-473a-b126-c4a0856345bc",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 8
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "441e8991-a0cf-4388-93d1-d2d6d884b8ef",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "24af7fa8-c2ce-473a-b126-c4a0856345bc",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "8a22524f-809d-4f0f-8315-c2386920cbe8",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 10
+                    },
+                    {
+                        "action": "add file",
+                        "action_type": "generic",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "contents": "container:description",
+                            "file_path": "artifact:*.cef.filePath",
+                            "vault_id": "artifact:*.cef.vaultId"
+                        },
+                        "angle": 0,
+                        "app": "Git",
+                        "appid": "ff116964-86f7-4e29-8763-4462ce0d39a7",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "add file",
+                                "actions": [
+                                    "clone repo",
+                                    "delete repo",
+                                    "git pull",
+                                    "git push",
+                                    "git commit",
+                                    "add file",
+                                    "delete file",
+                                    "git status",
+                                    "update file",
+                                    "list repos",
+                                    "configure ssh",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "Git",
+                                "app_version": "1.0.14",
+                                "appid": "ff116964-86f7-4e29-8763-4462ce0d39a7",
+                                "asset_name": "gitassetsplunk",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "contents": "container:description",
+                                    "file_path": "artifact:*.cef.filePath",
+                                    "vault_id": "artifact:*.cef.vaultId"
+                                },
+                                "has_app": true,
+                                "id": 105,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "gitassetsplunk",
+                                "output": [
+                                    {
+                                        "column_name": "Status",
+                                        "column_order": 4,
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Contents",
+                                        "column_order": 3,
+                                        "data_path": "action_result.parameter.contents",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "new content"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "File path",
+                                        "column_order": 1,
+                                        "contains": [
+                                            "file path"
+                                        ],
+                                        "data_path": "action_result.parameter.file_path",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "n1"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Vault ID",
+                                        "column_order": 2,
+                                        "contains": [
+                                            "vault id"
+                                        ],
+                                        "data_path": "action_result.parameter.vault_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "75881c96a30cd1f07d596059388368836b6b1b74"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file path"
+                                        ],
+                                        "data_path": "action_result.data.*.file_path",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "n1"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Repo name",
+                                        "column_order": 0,
+                                        "data_path": "action_result.data.*.repo_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "repo2"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "File file1 added successfully"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "contents": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Contents (text) of the file",
+                                        "key": "contents",
+                                        "order": 1,
+                                        "required": false
+                                    },
+                                    "file_path": {
+                                        "contains": [
+                                            "file path"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "File path in repo to add",
+                                        "key": "file_path",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": true
+                                    },
+                                    "vault_id": {
+                                        "contains": [
+                                            "vault id"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Vault ID",
+                                        "key": "vault_id",
+                                        "order": 2,
+                                        "primary": true,
+                                        "required": false
+                                    }
+                                },
+                                "product_name": "Git",
+                                "product_vendor": "Generic",
+                                "targets": "105",
+                                "type": "devops"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "add file"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Generic"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def add_file_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('add_file_1() called')\n\n    description_value = container.get('description', None)\n\n    # collect data for 'add_file_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.filePath', 'artifact:*.cef.vaultId', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'add_file_1' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'file_path': container_item[0],\n                'contents': description_value,\n                'vault_id': container_item[1],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[2]},\n            })\n\n    phantom.act(action=\"add file\", parameters=parameters, assets=['gitassetsplunk'], name=\"add_file_1\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "9c88c408-b65b-4f2f-beb6-81e9bf54e85c",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 67,
+                        "line_start": 42,
+                        "message": "Configuring now",
+                        "name": "add file",
+                        "notes": "",
+                        "number": 1,
+                        "order": 3,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 600,
+                            "y": 240
+                        },
+                        "previous_function": "",
+                        "previous_name": "add_file_1",
+                        "required_params": {
+                            "file_path": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Generic",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 11
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "23cb5dde-66a7-4811-8f48-fce5db3c5663",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "9c88c408-b65b-4f2f-beb6-81e9bf54e85c",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "8a22524f-809d-4f0f-8315-c2386920cbe8",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 12
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "144d2be9-a721-422d-813c-116030801b1e",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "32032bd8-bd26-4381-bd04-6d19f3b806ec",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "8a22524f-809d-4f0f-8315-c2386920cbe8",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 13
+                    },
+                    {
+                        "action": "send email",
+                        "action_type": "generic",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "attachments": "artifact:*.cef.vaultId",
+                            "bcc": "",
+                            "body": "Mail sent for the playbook automation",
+                            "cc": "gokulcode234@gmail.com",
+                            "from": "splunkadmin@gmail.com",
+                            "headers": "",
+                            "subject": "Playbook Automation Mail",
+                            "to": "testertesting070@gmail.com"
+                        },
+                        "angle": 0,
+                        "app": "SMTP",
+                        "appid": "45bb6f37-4478-499b-b4a3-51ecfa62b78c",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "send email",
+                                "actions": [
+                                    "send htmlemail",
+                                    "send rawemail",
+                                    "send email",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "SMTP",
+                                "app_version": "2.0.14",
+                                "appid": "45bb6f37-4478-499b-b4a3-51ecfa62b78c",
+                                "asset_name": "smtp",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "attachments": "artifact:*.cef.vaultId",
+                                    "bcc": "",
+                                    "body": "Mail sent for the playbook automation",
+                                    "cc": "gokulcode234@gmail.com",
+                                    "from": "splunkadmin@gmail.com",
+                                    "headers": "",
+                                    "subject": "Playbook Automation Mail",
+                                    "to": "testertesting070@gmail.com"
+                                },
+                                "has_app": true,
+                                "id": 6,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "smtp",
+                                "output": [
+                                    {
+                                        "column_name": "Status",
+                                        "column_order": 0,
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "vault id"
+                                        ],
+                                        "data_path": "action_result.parameter.attachments",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "ab2b2ccfba08ea538ef22f521caa01c3c2b17ccf"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.parameter.bcc",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "test1@testdomain.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.body",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Test body"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.parameter.cc",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "test2@testdomain.com"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.parameter.from",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "sender@testdomain.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.headers",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "{\"Subject\": \"Test1\", \"To\": \"test3@testdomain.com\"}"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.subject",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Test"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_path": "action_result.parameter.to",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "receiver@testdomain.com"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Message",
+                                        "column_order": 1,
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Email sent"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric"
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric"
+                                    }
+                                ],
+                                "parameters": {
+                                    "attachments": {
+                                        "allow_list": true,
+                                        "contains": [
+                                            "vault id"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Vault IDs of files to attach",
+                                        "key": "attachments",
+                                        "order": 6,
+                                        "primary": true,
+                                        "required": false,
+                                        "verbose": "Each file that is required to be attached, needs to be in the vault. Multiple file vault ids can be specified as comma separated."
+                                    },
+                                    "bcc": {
+                                        "allow_list": true,
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "List of recipients email addresses to include on bcc line",
+                                        "key": "bcc",
+                                        "order": 3,
+                                        "primary": true,
+                                        "required": false
+                                    },
+                                    "body": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Message body",
+                                        "key": "body",
+                                        "order": 5,
+                                        "required": true
+                                    },
+                                    "cc": {
+                                        "allow_list": true,
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "List of recipients email addresses to include on cc line",
+                                        "key": "cc",
+                                        "order": 2,
+                                        "primary": true,
+                                        "required": false
+                                    },
+                                    "from": {
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "From field",
+                                        "key": "from",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": false
+                                    },
+                                    "headers": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Custom email headers (formatted as JSON)",
+                                        "key": "headers",
+                                        "order": 7,
+                                        "required": false
+                                    },
+                                    "subject": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Message Subject",
+                                        "key": "subject",
+                                        "order": 4,
+                                        "required": false
+                                    },
+                                    "to": {
+                                        "allow_list": true,
+                                        "contains": [
+                                            "email"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "List of recipients email addresses",
+                                        "key": "to",
+                                        "order": 1,
+                                        "primary": true,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "SMTP",
+                                "product_vendor": "Generic",
+                                "targets": "6",
+                                "type": "email"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "send email"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Generic"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def send_email_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('send_email_1() called')\n\n    # collect data for 'send_email_1' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.vaultId', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'send_email_1' call\n    for container_item in container_data:\n        parameters.append({\n            'from': \"splunkadmin@gmail.com\",\n            'to': \"testertesting070@gmail.com\",\n            'cc': \"gokulcode234@gmail.com\",\n            'bcc': \"\",\n            'subject': \"Playbook Automation Mail\",\n            'body': \"Mail sent for the playbook automation\",\n            'attachments': container_item[0],\n            'headers': \"\",\n            # context (artifact id) is added to associate results with the artifact\n            'context': {'artifact_id': container_item[1]},\n        })\n\n    phantom.act(action=\"send email\", parameters=parameters, assets=['smtp'], name=\"send_email_1\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "24af7fa8-c2ce-473a-b126-c4a0856345bc",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 94,
+                        "line_start": 67,
+                        "message": "Configuring now",
+                        "name": "send email",
+                        "notes": "",
+                        "number": 1,
+                        "order": 4,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 600,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "send_email_1",
+                        "required_params": {
+                            "body": true,
+                            "to": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Generic",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 14
+                    }
+                ]
+            },
+            "notes": ""
+        },
+        "python_version": "2.7",
+        "schema": 4,
+        "version": "4.9.39220"
+    },
+    "create_time": "2020-11-20T12:10:48.422221+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
