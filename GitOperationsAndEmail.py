@@ -11,6 +11,9 @@ def on_start(container):
     # call 'add_file_1' block
     add_file_1(container=container)
 
+    # call 'prompt_1' block
+    prompt_1(container=container)
+
     return
 
 def add_file_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
@@ -79,6 +82,27 @@ def send_email_1(action=None, success=None, container=None, results=None, handle
     })
 
     phantom.act(action="send email", parameters=parameters, assets=['smtp'], name="send_email_1", parent_action=action)
+
+    return
+
+def prompt_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('prompt_1() called')
+    
+    # set user and message variables for phantom.prompt call
+    user = "admin"
+    message = """Hello There this is to specify that the playbook has been activated and a prompt has been initiated, you have 30 minutes to respond back."""
+
+    #responses:
+    response_types = [
+        {
+            "prompt": "",
+            "options": {
+                "type": "message",
+            },
+        },
+    ]
+
+    phantom.prompt2(container=container, user=user, message=message, respond_in_mins=30, name="prompt_1", response_types=response_types)
 
     return
 
